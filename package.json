@@ -6,7 +6,6 @@
     "test": "protractor ./src/protractor.conf.js",
     "webdriver-start": "webdriver-manager start",
     "webdriver-stop": "webdriver-manager stop"
-    
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +16,9 @@
     "@types/node": "^18.0.0",
     "jasmine": "^4.2.1",
     "protractor": "^7.0.0",
-    "protractor-html-reporter-2": "^1.0.4",
+    "protractor-html-reporter-2": "^1.0.4"
+  },
+  "devDependencies": {
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
   }
