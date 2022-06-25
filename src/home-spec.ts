@@ -31,8 +31,8 @@ describe ('Protractor baby steps',function(){
          console.log("Result",text);
          expect(text).toBe('-2')
      })
-         browser.sleep(2000);
-    })
+         browser.sleep(1000);
+    })  
     it('Divsion',function(){
         // browser.get("http://juliemr.github.io/protractor-demo/");
         element(by.css(".input-small:nth-child(1)")).sendKeys("4");
@@ -43,7 +43,7 @@ describe ('Protractor baby steps',function(){
          console.log("Result",text);
          expect(text).toBe('0.6666666666666666')
      })
-         browser.sleep(2000);
+         browser.sleep(1000);
     })
     it('Modulus',function(){
         // browser.get("http://juliemr.github.io/protractor-demo/");
@@ -55,7 +55,7 @@ describe ('Protractor baby steps',function(){
          console.log("Result",text);
          expect(text).toBe('4')
      })
-         browser.sleep(2000);
+         browser.sleep(1000);
     })
     it('Multiplication',function(){
         // browser.get("http://juliemr.github.io/protractor-demo/");
@@ -67,6 +67,6 @@ describe ('Protractor baby steps',function(){
          console.log("Result",text);
          expect(text).toBe('24')
      })
-         browser.sleep(2000);
+         browser.sleep(1000);
     })
 })

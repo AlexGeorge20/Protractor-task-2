@@ -1,7 +1,7 @@
 exports.config = {
   framework: 'jasmine', //Type of Framework used 
   directConnect:true, 
-  specs: ['home-spec.ts'], //Name of the Specfile
+  specs: ['form-task.ts'], //Name of the Specfile
   onPrepare() { 
      //global test set-up goes here 
      require('ts-node').register({ 
