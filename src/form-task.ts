@@ -26,7 +26,7 @@ describe ('Protractor baby steps',function(){
 
  })
 
-    // // TEXT---------------------------------------------------------------------------------
+//     // // TEXT---------------------------------------------------------------------------------
     it('Text',async function(){
         
       let a= await element(by.model("username")).isPresent();
@@ -47,7 +47,7 @@ describe ('Protractor baby steps',function(){
       browser.sleep(1000);
     })
 
-// // TEXTAREA-------------------------------------------------------------------------
+// // // TEXTAREA-------------------------------------------------------------------------
     it('Textarea',async function(){
         let a= await element(by.model("username")).isPresent();
         console.log("ELEMENT PRESENT",a);
@@ -62,7 +62,7 @@ describe ('Protractor baby steps',function(){
         })
     })
 
-// // MULTIPLE RADIO BTN -------------------------------------------------------------------
+// // // MULTIPLE RADIO BTN -------------------------------------------------------------------
  it('Multiple radio btn',async function(){
     let c= element(by.css("div:nth-child(5)"))
 
@@ -103,7 +103,7 @@ c.element(by.css("input[value='green']")).getAttribute('value').then((t)=>{
 
 })
 
-// //SELECT-----------------------------------------------------------------------
+// // //SELECT-----------------------------------------------------------------------
 it('Multiple radio btn', function(){
     let fr=element(by.css('div:nth-child(6)'))
     let a= element(by.model('fruit'))
@@ -131,7 +131,7 @@ browser.sleep(3000);
     })
 })
 
-// // ALERT---------------------------------------------------
+// // // ALERT---------------------------------------------------
     it('Alert',async function(){
         let a= await element(by.id("alertbutton")).isPresent();
       console.log("ELEMENT PRESENT",a);
@@ -148,7 +148,7 @@ browser.sleep(3000);
         browser.sleep(2000);
     })
 
- // // BUTTONS--------------------------------------------------------------
+//  // // BUTTONS--------------------------------------------------------------
 
  it('Buttons',async function(){
         let a= await element(by.id("exacttext")).isPresent();
@@ -187,7 +187,7 @@ expect(y).toBe(false)
 
  })
 
-// // INNERTEXT---------------------------------------------------------
+// // // INNERTEXT---------------------------------------------------------
 
 it('Innertext',async function(){
     element(by.id('bigdog')).getText().then((text)=>{
@@ -212,7 +212,7 @@ it('Innertext',async function(){
     })
 })
 
-// //INPUTS----------------------------------------------------------------
+// // //INPUTS----------------------------------------------------------------
 it('Inputs',async function(){
     element.all(by.className('input')).first().getAttribute('value').then((v)=>{
         console.log("value",v);
@@ -222,7 +222,7 @@ it('Inputs',async function(){
             })
 })
 
-//  //TRANSFORMED TEXT---------------------------------------------------
+// //  //TRANSFORMED TEXT---------------------------------------------------
 it('Transformed text',async function(){
     element(by.id('textuppercase')).getText().then((text)=>{
     console.log(text);
@@ -238,11 +238,71 @@ it('Transformed text',async function(){
     })
 })
 
-// // CHECKBOX
-// it('Checkbox',async function(){
-//         element(by.model('checked')).click()
-//         browser.sleep(2000);
-// })
+// // CLICKME TOGGLE
+it('Clickme',async function(){
+    browser.get("http://www.protractortest.org/testapp/ng1/#/animation");
+       
+        let a=await element(by.id('toggledNode')).isPresent()
+        let b=await element(by.id('toggledNode')).isDisplayed()
+        console.log("PRESENT",a);
+        console.log("DISPLAYED",b);
+        element(by.id('toggledNode')).getText().then((text)=>{
+            console.log("TEXT",text);
+            expect(text).toBe('I exist!')
+       })
+    
+       element(by.id('checkbox')).click()
+       let c=await element(by.id('toggledNode')).isPresent()
+    //    let d=await element(by.id('toggledNode')).isDisplayed()
+       console.log("PRESENT",c);
+    expect(c).toBe(false)
+    
+        browser.sleep(2000);
+})
+
+// // CHECKBOXES
+it('Checkboxes',async function(){
+    element(by.model('show')).click()
+   let a=await  element(by.id('shower')).isPresent()
+   let b=await  element(by.id('shower')).isDisplayed()
+   console.log("PRESENT",a);
+   console.log("DISPLAYED",b);
+   expect(b).toBe(false)
+
+   element(by.model('disabled')).click()
+   let c=await element(by.id('disabledButton')).isPresent()
+   let d=await element(by.id('disabledButton')).isDisplayed()
+   console.log("DUMMY PRESENT",c);
+   console.log("DUMMY DISPLAYED",d);
+   let e=await element(by.id('disabledButton')).getAttribute('disabled')
+   console.log("DISABLED",e);
+   expect(e).toBe('true')
+   
+   element(by.model('check.w')).click()
+   element(by.id('letterlist')).getText().then((w)=>{
+       console.log("Txt",w);
+       expect(w).toBe('w')
+       })
+    element(by.model('check.x')).click()
+    element(by.id('letterlist')).getText().then((x)=>{
+        console.log("Txt",x);
+        expect(x).toBe('wx')
+        })
+    element(by.model('check.w')).click()
+    element(by.id('letterlist')).getText().then((falsex)=>{
+        console.log("Txt",falsex);
+        expect(falsex).toBe('falsex')
+        })
+    element(by.model('check.x')).click()
+    element(by.id('letterlist')).getText().then((falsefalse)=>{
+        console.log("Txt",falsefalse);
+        expect(falsefalse).toBe('falsefalse')
+        })
+
+    browser.sleep(2000)
+
+
+})
 
 })
 
