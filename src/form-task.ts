@@ -143,7 +143,7 @@ browser.sleep(3000);
         element(by.id('alertbutton')).click()
        let text=await browser.switchTo().alert().getText()
        console.log("ALERT TEXT",text);
-      await expect(text).toBe('Hello')
+      expect(text).toBe('Hello')
       browser.switchTo().alert().accept()
         browser.sleep(2000);
     })
