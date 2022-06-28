@@ -63,8 +63,6 @@ element(by.className('s-pagination-item s-pagination-next s-pagination-button s-
 browser.wait(EC.visibilityOf( element(by.css("div[cel_widget_id='MAIN-SEARCH_RESULTS-2']"))),10000)
 
     element(by.css("div[cel_widget_id='MAIN-SEARCH_RESULTS-2']")).click()
-// browser.wait(EC.visibilityOf(element(by.css("div[data-component-id='522']"))),10000)
-// element(by.css("div[data-component-id='522']")).click()
 
 browser.sleep(3000)
 
