@@ -10,5 +10,12 @@ exports.config = {
 },
   onComplete() { 
     //global test tear-down goes here 
- }  
+ },  
+ jasmineNodeOpts: {
+  showColors: true,
+  defaultTimeoutInterval: 150000,
+  print: function () {},
+},
+getPageTimeout: 34000,
+allScriptsTimeout: 120000,
 }
