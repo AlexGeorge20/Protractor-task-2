@@ -2,6 +2,10 @@ exports.config = {
   framework: 'jasmine', //Type of Framework used 
   directConnect:true, 
   specs: ['amazon.ts'], //Name of the Specfile
+  capabilities: {
+    // browserName: 'firefox',
+    browserName: 'chrome',
+  },
   onPrepare() { 
      //global test set-up goes here 
      require('ts-node').register({ 
