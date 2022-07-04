@@ -1,8 +1,32 @@
 var HtmlReporter = require('protractor-beautiful-reporter');
+// const { parsedObj } = require('simple-argv-parser');
+// console.log("SIMPLE argv",parsedObj);
+// import * as yargs from 'yargs'
+// const argv=yargs.argv;
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
 
-// import params from './params'
+console.log("YARG V",argv);
+//=====================================
+// var argv = require( 'argv' );
+// var args = argv.option( options ).run();
+//   console.log("ARGVPKG",args);
+
+// argv.type( 'squared', function( value ) {
+//   value = parseFloat( value );
+//   console.log("val",value * value);
+//   return value * value;
+// });
+
+// argv.option({
+//   name: 'square',
+//   short: 's',
+//   type: 'squared'
+// });
+//==============
 console.log("PROCESSargv in config",process.argv.length);
-
+console.log("PROCESSargv in config3&4",process.argv[3]);
 var fs = require('fs');
 function rmDir (dirPath) {
   try { var files = fs.readdirSync(dirPath); }

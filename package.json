@@ -18,9 +18,12 @@
   "dependencies": {
     "@types/jasmine": "^4.0.3",
     "@types/node": "^18.0.0",
+    "argv": "0.0.2",
     "jasmine": "^4.2.1",
     "protractor": "^7.0.0",
-    "protractor-html-reporter-2": "^1.0.4"
+    "protractor-html-reporter-2": "^1.0.4",
+   
+    "yargs": "^17.5.1"
   },
   "devDependencies": {
     "ts-node": "^10.8.1",
