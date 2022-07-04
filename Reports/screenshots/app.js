@@ -274,67 +274,179 @@ app.controller('ScreenshotReportController', ['$scope', '$http', 'TitleService',
         "description": "Pin and login|Amazon",
         "passed": true,
         "pending": false,
-        "os": "linux",
-        "instanceId": 380236,
+        "os": "Linux",
+        "instanceId": 393169,
         "browser": {
-            "name": "firefox",
-            "version": "101.0.1"
+            "name": "chrome",
+            "version": "103.0.5060.53"
         },
         "message": "Passed.",
         "trace": "",
-        "browserLogs": [],
-        "screenShotFile": "00850066-00cd-0015-00d5-00f1009200fb.png",
-        "timestamp": 1656949592274,
-        "duration": 20834
+        "browserLogs": [
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952687539,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "https://www.amazon.in/gp/product/sessionCacheUpdateHandler.html - Failed to load resource: the server responded with a status of 404 ()",
+                "timestamp": 1656952693925,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952697251,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "https://www.amazon.in/gp/product/sessionCacheUpdateHandler.html - Failed to load resource: the server responded with a status of 404 ()",
+                "timestamp": 1656952698727,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "https://images-eu.ssl-images-amazon.com/images/I/31YXrY93hfL.js 3:347 \"Error logged with the Track&Report JS errors API(http://tiny/1covqr6l8/wamazindeClieUserJava): {\\\"m\\\":\\\"Late loading module @m/mash\\\",\\\"csm\\\":\\\"v5 ueLogError callee\\\",\\\"logLevel\\\":\\\"WARN\\\",\\\"attribution\\\":\\\"MIX\\\",\\\"pageURL\\\":\\\"https://www.amazon.in/\\\",\\\"s\\\":[\\\"function(a,b,c,u){b={message:b,logLevel:c||\\\\\\\"ERROR\\\\\\\",attribution:l(\\\\\\\":\\\\\\\",this.attribution,u)};if(d.ueLogError)return d.ueLogError(a||b,a?b:null),!0;console&&console.error&&\\\\n(console.log(b),console.error(a));return!1}\\\",\\\"function(a,b,c){return this.logError(null,a,b,c)}\\\",\\\"function(){var c=\\\\\\\"Late loading module \\\\\\\"+a;f.P.log(c,\\\\\\\"WARN\\\\\\\",\\\\\\\"MIX\\\\\\\");b(c)}\\\"],\\\"t\\\":3597}\" Object",
+                "timestamp": 1656952700855,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952704047,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952705877,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "https://www.amazon.in/ap/signin - [DOM] Found 2 elements with non-unique id #ap_email: (More info: https://goo.gl/9p2vKq) %o %o",
+                "timestamp": 1656952706239,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952707847,
+                "type": ""
+            },
+            {
+                "level": "SEVERE",
+                "message": "https://www.amazon.in/gp/product/sessionCacheUpdateHandler.html - Failed to load resource: the server responded with a status of 404 ()",
+                "timestamp": 1656952708750,
+                "type": ""
+            }
+        ],
+        "screenShotFile": "00d000ce-005a-0025-004b-001d004300eb.png",
+        "timestamp": 1656952686399,
+        "duration": 25033
     },
     {
         "description": "Searchbar & loop pg|Amazon",
         "passed": true,
         "pending": false,
-        "os": "linux",
-        "instanceId": 380236,
+        "os": "Linux",
+        "instanceId": 393169,
         "browser": {
-            "name": "firefox",
-            "version": "101.0.1"
+            "name": "chrome",
+            "version": "103.0.5060.53"
         },
         "message": "Passed",
-        "browserLogs": [],
-        "screenShotFile": "0013008f-0053-009f-0012-002600aa00fb.png",
-        "timestamp": 1656949613236,
-        "duration": 6835
+        "browserLogs": [
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952712067,
+                "type": ""
+            }
+        ],
+        "screenShotFile": "000a000c-003f-00b4-0059-006b00180062.png",
+        "timestamp": 1656952711608,
+        "duration": 8754
     },
     {
         "description": "cick 1st item,prdt name|Amazon",
         "passed": true,
         "pending": false,
-        "os": "linux",
-        "instanceId": 380236,
+        "os": "Linux",
+        "instanceId": 393169,
         "browser": {
-            "name": "firefox",
-            "version": "101.0.1"
+            "name": "chrome",
+            "version": "103.0.5060.53"
         },
         "message": "Passed",
-        "browserLogs": [],
-        "screenShotFile": "00110074-0029-0096-005b-000600cc00f8.png",
-        "timestamp": 1656949620149,
-        "duration": 5215
+        "browserLogs": [
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952721747,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "https://images-eu.ssl-images-amazon.com/images/I/11jhdZtp9gL._RC%7C01x4giTy+uL.js,01r9LpT6pbL.js,31biqmrJFZL.js,11yAqqXzKZL.js,91vdKRYauwL.js,01ELLYeIOkL.js_.js?AUIClients/Brila 101:1974 \"VIDEOJS:\" \"WARN:\" \"Using hls options is deprecated. Use vhs instead.\"",
+                "timestamp": 1656952724266,
+                "type": ""
+            }
+        ],
+        "screenShotFile": "00b8003d-00e4-0041-0074-0004008900cd.png",
+        "timestamp": 1656952720483,
+        "duration": 7419
     },
     {
         "description": "Add to cart & check|Amazon",
         "passed": true,
         "pending": false,
-        "os": "linux",
-        "instanceId": 380236,
+        "os": "Linux",
+        "instanceId": 393169,
         "browser": {
-            "name": "firefox",
-            "version": "101.0.1"
+            "name": "chrome",
+            "version": "103.0.5060.53"
         },
         "message": "Passed.",
         "trace": "",
-        "browserLogs": [],
-        "screenShotFile": "00cd00c3-0096-00ce-0007-00ab00f00099.png",
-        "timestamp": 1656949625469,
-        "duration": 10707
+        "browserLogs": [
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952732929,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952733660,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952734581,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952735203,
+                "type": ""
+            },
+            {
+                "level": "WARNING",
+                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
+                "timestamp": 1656952736157,
+                "type": ""
+            }
+        ],
+        "screenShotFile": "002e001c-00ad-00a9-0029-004700a900b0.png",
+        "timestamp": 1656952728095,
+        "duration": 13198
     }
 ];
 
