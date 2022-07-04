@@ -214,14 +214,14 @@ try{
     element(by.id("nav-cart")).click();
     console.log("checking items in cart");
 
-    browser.sleep(2000);
-
-
-    let text=await element(by.css("ul[class='a-unordered-list a-nostyle a-vertical a-spacing-mini sc-info-block'][0]"))
+    browser.sleep(3000);
+               
+    //  await browser.wait(
+    //   EC.visibilityOf(element(by.css("div[data-item-count='1']")).element(by.css("span[class='a-truncate-full a-offscreen']"))),10000);
+      // let text=await element(by.css("div[data-item-count='1']")).element(by.css("span[class='a-truncate-full a-offscreen']")).getAttribute('textContent')
+let text=await element(by.css("ul[class='a-unordered-list a-nostyle a-vertical a-spacing-mini sc-info-block']"))
       .element(by.css("li:nth-child(1)")).element(by.css("span[class='a-truncate-full a-offscreen']"))
       .getAttribute('textContent')
-      
-
     console.log("PRdct text", text);
     console.log("PRDT title",  pdtitle);
     expect(pdtitle).toBe(text)
