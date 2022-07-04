@@ -1,6 +1,21 @@
 var HtmlReporter = require('protractor-beautiful-reporter');
 // import params from './params'
-console.log("PROCESSargv in config",process.argv.length),
+console.log("PROCESSargv in config",process.argv.length);
+
+var fs = require('fs');
+function rmDir (dirPath) {
+  try { var files = fs.readdirSync(dirPath); }
+  catch(e) { return; }
+  if (files.length > 0)
+    for (var i = 0; i < files.length; i++) {
+      var filePath = dirPath + '/' + files[i];
+      if (fs.statSync(filePath).isFile())
+        fs.unlinkSync(filePath);
+      else
+        rmDir(filePath);
+    }
+  fs.rmdirSync(dirPath);
+}; 
 
 exports.config = {
   framework: 'jasmine', //Type of Framework used 
@@ -15,9 +30,6 @@ exports.config = {
   // },
   //  { browserName: 'chrome',
   // }],
-
- 
-
   onPrepare() { 
      //global test set-up goes here 
      require('ts-node').register({ 
@@ -25,8 +37,11 @@ exports.config = {
   }),
 // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
     jasmine.getEnv().addReporter(new HtmlReporter({
-       baseDirectory: './Reports/screenshots'
+       baseDirectory: './Reports/screenshots',
+       cleanDestination: true
     }).getJasmine2Reporter());
+   // delete prev reports files
+    rmDir('./Reports/screenshots')
  },
 
   onComplete() { 

@@ -3,7 +3,7 @@ import { browser, element, by, protractor } from "protractor";
 describe("Amazon", function () {
   var EC = protractor.ExpectedConditions;
   let pdtitle:string;
-  console.log("PROCESSargv in amazonts",process.argv[4]),
+  // console.log("PROCESSargv in amazonts",process.argv[4]),
 
   it("Pin and login", async () => {
     await browser.waitForAngularEnabled(false);
@@ -107,7 +107,7 @@ describe("Amazon", function () {
       ).click();
     }
         })
-        it("cick 1st item,prdt name", async () => {      
+  it("cick 1st item,prdt name", async () => {      
     await browser.wait(
       EC.visibilityOf(
         element(by.css("div[cel_widget_id='MAIN-SEARCH_RESULTS-2']")).element(
@@ -147,7 +147,7 @@ describe("Amazon", function () {
 
     browser.sleep(3000)
         })
-        it("Add to cart & check", async () => {
+ it("Add to cart & check", async () => {
     await browser.wait(
       EC.visibilityOf(
         element(by.id("add-to-cart-button"))
@@ -212,12 +212,12 @@ try{
     expect(itemno).toBeGreaterThan(0);
 
     element(by.id("nav-cart")).click();
-    console.log("check items in cart");
+    console.log("checking items in cart");
 
     browser.sleep(2000);
 
 
-    let text=await element(by.css("ul[class='a-unordered-list a-nostyle a-vertical a-spacing-mini sc-info-block']"))
+    let text=await element(by.css("ul[class='a-unordered-list a-nostyle a-vertical a-spacing-mini sc-info-block'][0]"))
       .element(by.css("li:nth-child(1)")).element(by.css("span[class='a-truncate-full a-offscreen']"))
       .getAttribute('textContent')
       

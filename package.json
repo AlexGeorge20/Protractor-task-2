@@ -10,8 +10,7 @@
     "webdriver-stop": "webdriver-manager stop",
     "firefox": "--browser=firefox",
     "chrome": "--browser=chrome"
-
-      },
+  },
   "author": "",
   "license": "ISC",
   "keywords": [],
