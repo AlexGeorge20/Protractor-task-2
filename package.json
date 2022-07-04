@@ -7,9 +7,8 @@
     "test-firefox": "protractor ./src/protractor.conf.js --browser=firefox ",
     "test-chrome": "protractor ./src/protractor.conf.js --browser=chrome ",
     "webdriver-start": "webdriver-manager start",
-    "webdriver-stop": "webdriver-manager stop",
-    "firefox": "--browser=firefox",
-    "chrome": "--browser=chrome"
+    "webdriver-stop": "webdriver-manager stop"
+    
   },
   "author": "",
   "license": "ISC",

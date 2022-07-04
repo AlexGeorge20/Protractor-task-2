@@ -1,14 +1,18 @@
 import { browser, element, by, protractor } from "protractor";
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+ const site=argv.site
+console.log("site YARG V",site);
 
 describe("Amazon", function () {
   var EC = protractor.ExpectedConditions;
   let pdtitle:string;
-  // console.log("PROCESSargv in amazonts",process.argv[4]),
-
+  
   it("Pin and login", async () => {
     await browser.waitForAngularEnabled(false);
 
-    await browser.get("https://www.amazon.in");
+    await browser.get(`https://${site}`);
   //  console.log("Browser TITLE", browser.getTitle());
    
     await element(by.id("glow-ingress-line2")).click();
@@ -23,10 +27,11 @@ describe("Amazon", function () {
     // console.log("DISPLAYED",b);
     expect(b).toBe(true);
     await element(by.id("GLUXZipUpdateInput")).sendKeys("695004");
+    browser.sleep(2000);
     await element(by.id("GLUXZipUpdate"))
       .element(by.css("input[aria-labelledby='GLUXZipUpdate-announce']"))
       .click();
-
+   
     await browser.wait(
       EC.visibilityOf(
         element(by.id("glow-ingress-block")).element(
@@ -41,8 +46,7 @@ describe("Amazon", function () {
       .getText();
       browser.sleep(3000);
     console.log("CODE", code);
-   
-
+  
     expect(code).toMatch("Thiruvana... 695004");
 
     await element(by.id("nav-link-accountList")).click();
@@ -88,7 +92,7 @@ describe("Amazon", function () {
 
     for (let i = 0; i < j; i++) {
       console.log("inside loop");
-      console.log("ARG3",process.argv[3]);
+      // console.log("ARG3",process.argv[3]);
       
       await browser.wait(
         EC.visibilityOf(
@@ -219,7 +223,10 @@ try{
     //  await browser.wait(
     //   EC.visibilityOf(element(by.css("div[data-item-count='1']")).element(by.css("span[class='a-truncate-full a-offscreen']"))),10000);
       // let text=await element(by.css("div[data-item-count='1']")).element(by.css("span[class='a-truncate-full a-offscreen']")).getAttribute('textContent')
-let text=await element(by.css("ul[class='a-unordered-list a-nostyle a-vertical a-spacing-mini sc-info-block']"))
+// let text=await element(by.css("ul[class='a-unordered-list a-nostyle a-vertical a-spacing-mini sc-info-block']"))
+//       .element(by.css("li:nth-child(1)")).element(by.css("span[class='a-truncate-full a-offscreen']"))
+//       .getAttribute('textContent')
+      let text=await element(by.css("div[data-item-index='1']"))
       .element(by.css("li:nth-child(1)")).element(by.css("span[class='a-truncate-full a-offscreen']"))
       .getAttribute('textContent')
     console.log("PRdct text", text);

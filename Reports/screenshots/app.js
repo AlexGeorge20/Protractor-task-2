@@ -272,102 +272,69 @@ app.controller('ScreenshotReportController', ['$scope', '$http', 'TitleService',
     var results = [
     {
         "description": "Pin and login|Amazon",
-        "passed": false,
+        "passed": true,
         "pending": false,
-        "os": "Linux",
-        "instanceId": 338678,
+        "os": "linux",
+        "instanceId": 380236,
         "browser": {
-            "name": "chrome",
-            "version": "103.0.5060.53"
+            "name": "firefox",
+            "version": "101.0.1"
         },
-        "message": [
-            "Expected 'Select your address' to match 'Thiruvana... 695004'.",
-            "Failed: element click intercepted: Element <a href=\"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_ya_signin&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=inflex&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;\" class=\"nav-a nav-a-2   nav-progressive-attribute\" data-nav-ref=\"nav_ya_signin\" data-nav-role=\"signin\" data-ux-jq-mouseenter=\"true\" id=\"nav-link-accountList\" tabindex=\"0\" data-csa-c-type=\"link\" data-csa-c-slot-id=\"nav-link-accountList\" data-csa-c-content-id=\"nav_ya_signin\" data-csa-c-id=\"mwt9jw-oa7kn1-s3katc-114rc4\">...</a> is not clickable at point (791, 30). Other element would receive the click: <div class=\"a-modal-scroller a-declarative\" data-action=\"a-popover-floating-close\" style=\"padding-bottom: 0px; visibility: visible;\">...</div>\n  (Session info: chrome=103.0.5060.53)\n  (Driver info: chromedriver=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}),platform=Linux 5.13.0-51-generic x86_64)"
-        ],
-        "trace": [
-            "Error: Failed expectation\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:46:18)\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
-            "WebDriverError: element click intercepted: Element <a href=\"https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_ya_signin&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=inflex&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;\" class=\"nav-a nav-a-2   nav-progressive-attribute\" data-nav-ref=\"nav_ya_signin\" data-nav-role=\"signin\" data-ux-jq-mouseenter=\"true\" id=\"nav-link-accountList\" tabindex=\"0\" data-csa-c-type=\"link\" data-csa-c-slot-id=\"nav-link-accountList\" data-csa-c-content-id=\"nav_ya_signin\" data-csa-c-id=\"mwt9jw-oa7kn1-s3katc-114rc4\">...</a> is not clickable at point (791, 30). Other element would receive the click: <div class=\"a-modal-scroller a-declarative\" data-action=\"a-popover-floating-close\" style=\"padding-bottom: 0px; visibility: visible;\">...</div>\n  (Session info: chrome=103.0.5060.53)\n  (Driver info: chromedriver=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}),platform=Linux 5.13.0-51-generic x86_64)\n    at Object.checkLegacyResponse (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/error.js:546:15)\n    at parseHttpResponse (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\nFrom: Task: WebElement.click()\n    at Driver.schedule (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at WebElement.schedule_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:2010:25)\n    at WebElement.click (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:2092:17)\n    at actionFn (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:89:44)\n    at Array.map (<anonymous>)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:461:65\n    at ManagedPromise.invokeCallback_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:1376:14)\n    at TaskQueue.execute_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2927:27Error\n    at ElementArrayFinder.applyAction_ (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:459:27)\n    at ElementArrayFinder.<computed> [as click] (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:91:29)\n    at ElementFinder.<computed> [as click] (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:831:22)\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:48:50)\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\nFrom: Task: Run it(\"Pin and login\") in control flow\n    at UserContext.<anonymous> (/home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:94:19)\n    at attempt (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)\n    at QueueRunner.run (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)\n    at runNext (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:64:48\n    at ControlFlow.emit (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/events.js:62:21)\n    at ControlFlow.shutdown_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2674:10)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2599:53\nFrom asynchronous test: \nError\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:8:3)\n    at addSpecsToSuite (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)\n    at Env.describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)\n    at describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)\n    at Object.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:3:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Module.m._compile (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1597:23)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Object.require.extensions.<computed> [as .ts] (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1600:12)"
-        ],
-        "browserLogs": [
-            {
-                "level": "WARNING",
-                "message": "security - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.",
-                "timestamp": 1656928276949,
-                "type": ""
-            },
-            {
-                "level": "SEVERE",
-                "message": "https://www.amazon.in/gp/product/sessionCacheUpdateHandler.html - Failed to load resource: the server responded with a status of 404 ()",
-                "timestamp": 1656928278356,
-                "type": ""
-            }
-        ],
-        "screenShotFile": "00a40085-005c-000b-0049-008b0098009b.png",
-        "timestamp": 1656928276650,
-        "duration": 8384
+        "message": "Passed.",
+        "trace": "",
+        "browserLogs": [],
+        "screenShotFile": "00850066-00cd-0015-00d5-00f1009200fb.png",
+        "timestamp": 1656949592274,
+        "duration": 20834
     },
     {
         "description": "Searchbar & loop pg|Amazon",
-        "passed": false,
+        "passed": true,
         "pending": false,
-        "os": "Linux",
-        "instanceId": 338678,
+        "os": "linux",
+        "instanceId": 380236,
         "browser": {
-            "name": "chrome",
-            "version": "103.0.5060.53"
+            "name": "firefox",
+            "version": "101.0.1"
         },
-        "message": [
-            "Failed: element click intercepted: Element <input id=\"nav-search-submit-button\" type=\"submit\" class=\"nav-input nav-progressive-attribute\" value=\"Go\" tabindex=\"0\"> is not clickable at point (640, 30). Other element would receive the click: <div class=\"a-modal-scroller a-declarative\" data-action=\"a-popover-floating-close\" style=\"padding-bottom: 0px; visibility: visible;\">...</div>\n  (Session info: chrome=103.0.5060.53)\n  (Driver info: chromedriver=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}),platform=Linux 5.13.0-51-generic x86_64)"
-        ],
-        "trace": [
-            "WebDriverError: element click intercepted: Element <input id=\"nav-search-submit-button\" type=\"submit\" class=\"nav-input nav-progressive-attribute\" value=\"Go\" tabindex=\"0\"> is not clickable at point (640, 30). Other element would receive the click: <div class=\"a-modal-scroller a-declarative\" data-action=\"a-popover-floating-close\" style=\"padding-bottom: 0px; visibility: visible;\">...</div>\n  (Session info: chrome=103.0.5060.53)\n  (Driver info: chromedriver=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}),platform=Linux 5.13.0-51-generic x86_64)\n    at Object.checkLegacyResponse (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/error.js:546:15)\n    at parseHttpResponse (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\nFrom: Task: WebElement.click()\n    at Driver.schedule (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n    at WebElement.schedule_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:2010:25)\n    at WebElement.click (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:2092:17)\n    at actionFn (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:89:44)\n    at Array.map (<anonymous>)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:461:65\n    at ManagedPromise.invokeCallback_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:1376:14)\n    at TaskQueue.execute_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2927:27Error\n    at ElementArrayFinder.applyAction_ (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:459:27)\n    at ElementArrayFinder.<computed> [as click] (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:91:29)\n    at ElementFinder.<computed> [as click] (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/element.js:831:22)\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:74:54)\n    at Generator.next (<anonymous>)\n    at fulfilled (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:5:58)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\nFrom: Task: Run it(\"Searchbar & loop pg\") in control flow\n    at UserContext.<anonymous> (/home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:94:19)\n    at attempt (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)\n    at QueueRunner.run (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)\n    at runNext (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:64:48\n    at ControlFlow.emit (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/events.js:62:21)\n    at ControlFlow.shutdown_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2674:10)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2599:53\nFrom asynchronous test: \nError\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:67:3)\n    at addSpecsToSuite (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)\n    at Env.describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)\n    at describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)\n    at Object.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:3:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Module.m._compile (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1597:23)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Object.require.extensions.<computed> [as .ts] (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1600:12)"
-        ],
+        "message": "Passed",
         "browserLogs": [],
-        "screenShotFile": "0085004f-00fc-00d5-0029-00c100a300d6.png",
-        "timestamp": 1656928285203,
-        "duration": 1229
+        "screenShotFile": "0013008f-0053-009f-0012-002600aa00fb.png",
+        "timestamp": 1656949613236,
+        "duration": 6835
     },
     {
         "description": "cick 1st item,prdt name|Amazon",
-        "passed": false,
+        "passed": true,
         "pending": false,
-        "os": "Linux",
-        "instanceId": 338678,
+        "os": "linux",
+        "instanceId": 380236,
         "browser": {
-            "name": "chrome",
-            "version": "103.0.5060.53"
+            "name": "firefox",
+            "version": "101.0.1"
         },
-        "message": [
-            "Failed: Wait timed out after 10004ms"
-        ],
-        "trace": [
-            "TimeoutError: Wait timed out after 10004ms\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2201:17\n    at ManagedPromise.invokeCallback_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:1376:14)\n    at TaskQueue.execute_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2927:27\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:668:7\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\nFrom: Task: <anonymous wait>\n    at scheduleWait (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2188:20)\n    at ControlFlow.wait (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2517:12)\n    at Driver.wait (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:934:29)\n    at run (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/browser.js:58:33)\n    at ProtractorBrowser.to.<computed> [as wait] (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/browser.js:66:16)\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:111:19)\n    at Generator.next (<anonymous>)\n    at /home/ntpl/Desktop/end-2-end-project/src/amazon.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:4:12)\nFrom: Task: Run it(\"cick 1st item,prdt name\") in control flow\n    at UserContext.<anonymous> (/home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:94:19)\n    at attempt (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)\n    at QueueRunner.run (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)\n    at runNext (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:64:48\n    at ControlFlow.emit (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/events.js:62:21)\n    at ControlFlow.shutdown_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2674:10)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2599:53\nFrom asynchronous test: \nError\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:110:3)\n    at addSpecsToSuite (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)\n    at Env.describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)\n    at describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)\n    at Object.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:3:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Module.m._compile (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1597:23)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Object.require.extensions.<computed> [as .ts] (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1600:12)"
-        ],
+        "message": "Passed",
         "browserLogs": [],
-        "screenShotFile": "00b30044-0013-001a-0087-000800260029.png",
-        "timestamp": 1656928286623,
-        "duration": 10007
+        "screenShotFile": "00110074-0029-0096-005b-000600cc00f8.png",
+        "timestamp": 1656949620149,
+        "duration": 5215
     },
     {
         "description": "Add to cart & check|Amazon",
-        "passed": false,
+        "passed": true,
         "pending": false,
-        "os": "Linux",
-        "instanceId": 338678,
+        "os": "linux",
+        "instanceId": 380236,
         "browser": {
-            "name": "chrome",
-            "version": "103.0.5060.53"
+            "name": "firefox",
+            "version": "101.0.1"
         },
-        "message": [
-            "Failed: Wait timed out after 10004ms"
-        ],
-        "trace": [
-            "TimeoutError: Wait timed out after 10004ms\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2201:17\n    at ManagedPromise.invokeCallback_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:1376:14)\n    at TaskQueue.execute_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3084:14)\n    at TaskQueue.executeNext_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:3067:27)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2927:27\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:668:7\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\nFrom: Task: <anonymous wait>\n    at scheduleWait (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2188:20)\n    at ControlFlow.wait (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2517:12)\n    at Driver.wait (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/webdriver.js:934:29)\n    at run (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/browser.js:58:33)\n    at ProtractorBrowser.to.<computed> [as wait] (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/built/browser.js:66:16)\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:151:19)\n    at Generator.next (<anonymous>)\n    at /home/ntpl/Desktop/end-2-end-project/src/amazon.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:4:12)\nFrom: Task: Run it(\"Add to cart & check\") in control flow\n    at UserContext.<anonymous> (/home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:94:19)\n    at attempt (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)\n    at QueueRunner.run (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)\n    at runNext (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/jasminewd2/index.js:64:48\n    at ControlFlow.emit (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/events.js:62:21)\n    at ControlFlow.shutdown_ (/home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2674:10)\n    at /home/ntpl/Desktop/end-2-end-project/node_modules/selenium-webdriver/lib/promise.js:2599:53\nFrom asynchronous test: \nError\n    at Suite.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:150:2)\n    at addSpecsToSuite (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)\n    at Env.describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)\n    at describe (/home/ntpl/Desktop/end-2-end-project/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)\n    at Object.<anonymous> (/home/ntpl/Desktop/end-2-end-project/src/amazon.ts:3:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Module.m._compile (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1597:23)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Object.require.extensions.<computed> [as .ts] (/home/ntpl/Desktop/end-2-end-project/node_modules/ts-node/src/index.ts:1600:12)"
-        ],
+        "message": "Passed.",
+        "trace": "",
         "browserLogs": [],
-        "screenShotFile": "00630070-0011-0099-007a-008400a000d7.png",
-        "timestamp": 1656928296833,
-        "duration": 10006
+        "screenShotFile": "00cd00c3-0096-00ce-0007-00ab00f00099.png",
+        "timestamp": 1656949625469,
+        "duration": 10707
     }
 ];
 
