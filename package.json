@@ -4,9 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor ./src/protractor.conf.js",
+    "test-firefox": "protractor ./src/protractor.conf.js --browser=firefox ",
+    "test-chrome": "protractor ./src/protractor.conf.js --browser=chrome ",
     "webdriver-start": "webdriver-manager start",
-    "webdriver-stop": "webdriver-manager stop"
-  },
+    "webdriver-stop": "webdriver-manager stop",
+    "firefox": "--browser=firefox",
+    "chrome": "--browser=chrome"
+
+      },
   "author": "",
   "license": "ISC",
   "keywords": [],
