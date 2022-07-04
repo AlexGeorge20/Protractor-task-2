@@ -1,4 +1,5 @@
 var HtmlReporter = require('protractor-beautiful-reporter');
+
 // import params from './params'
 console.log("PROCESSargv in config",process.argv.length);
 
@@ -38,7 +39,6 @@ exports.config = {
 // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
     jasmine.getEnv().addReporter(new HtmlReporter({
        baseDirectory: './Reports/screenshots',
-       cleanDestination: true
     }).getJasmine2Reporter());
    // delete prev reports files
     rmDir('./Reports/screenshots')
