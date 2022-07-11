@@ -2,17 +2,23 @@ import { browser, element, by, protractor } from "protractor";
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
- const site=argv.site
-console.log("site YARG V",site);
+ const domain=argv.domain
+console.log("site YARG V",domain);
+
+function siteName(){
+  let sitename= `https://amazon.${domain}`
+ 
+  return  sitename
+}
+
 
 describe("Amazon", function () {
   var EC = protractor.ExpectedConditions;
   let pdtitle:string;
-  
-  it("Pin and login", async () => {
+    it("Pin and login", async () => {
     await browser.waitForAngularEnabled(false);
 
-    await browser.get(`https://${site}`);
+    await browser.get(siteName());
   //  console.log("Browser TITLE", browser.getTitle());
    
     await element(by.id("glow-ingress-line2")).click();
@@ -67,7 +73,6 @@ describe("Amazon", function () {
     let f = await element(by.id("ap_password")).isDisplayed();
     await expect(f).toBe(true);
     await element(by.id("ap_password")).sendKeys("qwerty");
-
     await element(by.id("signInSubmit")).click();
     await browser.sleep(5000);
         });
@@ -115,7 +120,7 @@ describe("Amazon", function () {
       ).click();
     }
         })
-  it("cick 1st item,prdt name", async () => {      
+  it("click 1st item,prdt name", async () => {      
     await browser.wait(
       EC.visibilityOf(
         element(by.css("div[cel_widget_id='MAIN-SEARCH_RESULTS-2']")).element(
@@ -156,12 +161,7 @@ describe("Amazon", function () {
     browser.sleep(3000)
         })
  it("Add to cart & check", async () => {
-    await browser.wait(
-      EC.visibilityOf(
-        element(by.id("add-to-cart-button"))
-      ),
-      10000
-    );
+    await browser.wait(EC.visibilityOf(element(by.id("add-to-cart-button"))),10000);
 let pre=await element(by.id("add-to-cart-button")).isPresent()
 let dis=await element(by.id("add-to-cart-button")).isDisplayed() 
     expect(dis).toBe(true)
@@ -175,7 +175,6 @@ console.log('add to cart',dis);
     });
 
     await element(by.id("add-to-cart-button")).click();
-
     browser.driver.switchTo().activeElement();
     console.log("going to close btn");
 

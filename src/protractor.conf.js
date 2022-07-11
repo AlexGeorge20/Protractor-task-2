@@ -5,7 +5,7 @@ const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
  const browser=argv.browser
-console.log("browserconfg YARG V",browser);
+console.log("browserNameconfg YARG V",browser);
 // if (argv.ships > 3 && argv.distance < 53.5) {
 //   console.log('Plunder more riffiwobbles!',argv)
 // } else {
@@ -13,8 +13,7 @@ console.log("browserconfg YARG V",browser);
 // }
 // console.log('cccc',argv.ships);
 
-// // console.log("PROCESSargv length in config",process.argv.length);
-// //console.log("PROCESSargv in config3&4",process.argv[4]);
+
 //---------------------------remove report files
 var fs = require('fs');
 function rmDir (dirPath) {
@@ -38,6 +37,10 @@ exports.config = {
   specs: ['amazon.ts'], //Name of the Specfile
   capabilities:{
     browserName: `${browser}`,
+    // browserName: 'chrome',
+  chromeOptions: {
+    // args: ["--headless"]
+  }
   
   },
     // multiCapabilities: [{
@@ -70,3 +73,5 @@ exports.config = {
 getPageTimeout: 34000,
 allScriptsTimeout: 120000,
 }
+
+// npm run test -- --browser=chrome --domain=in
